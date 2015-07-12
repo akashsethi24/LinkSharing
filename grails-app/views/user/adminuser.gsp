@@ -88,7 +88,9 @@
             </td>
         </tr>
     </g:each>
-    <g:paginate total="${total}" max="20" params="[q:params.q]"/>
+    <g:paginate next="Forward" prev="Back"
+                maxsteps="0" controller="user"
+                action="adminuser" total="${total}" />
 </table>
 </body>
 </html>

@@ -5,7 +5,7 @@ import grails.plugin.mail.MailService
 class LoginController {
     def mailService;
     User u2
-    boolean aBoolean = true, bbool = true, loginb = true, logini = true,bemail=true;
+    boolean aBoolean = true, bbool , loginb = true, logini = true,bemail=true;
 
     def index() {
         session["user"] = null

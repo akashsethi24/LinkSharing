@@ -95,8 +95,8 @@ def edituser()
     }
     def adminuser()
     {
-        params.max = params.max ?: 20
-        List<User> userList= User.findAllWhere("admin":false,[max: 20])
+        params.max = params.max ?: 10
+        List<User> userList= User.findAllWhere("admin":false,[max: 0,offset:0])
         user = User.findByUsername(session["user"])
         def total = User.findAll()
         [user:userList,admin: user,total:total]

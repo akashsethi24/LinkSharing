@@ -93,11 +93,12 @@ def edittopic(){
     def admintopic(){
         User user = User.findByUsername(session["user"])
         params.max = params.max ?: 20
-        List<Topic> topics = Topic.createCriteria().list(max:20) {
+        List<Topic> topics = Topic.createCriteria().list(max:20,offset:0) {
             like("name","%")
         }
         println(topics)
         def tcount= Topic.count()
         [user: user,topic: topics,total:tcount]
     }
+
 }
